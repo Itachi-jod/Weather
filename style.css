@@ -1,27 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Poppins', sans-serif;
-  background: #87ceeb;
+  background: linear-gradient(to top, #87ceeb, #e0f7ff);
   overflow: hidden;
+  height: 100vh;
 }
 
-.clouds::before, .clouds::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
+.sky {
+  position: fixed;
+  width: 100%;
   height: 100%;
-  background: url('https://www.transparenttextures.com/patterns/clouds.png') repeat;
-  animation: moveClouds 60s linear infinite;
-  opacity: 0.4;
+  overflow: hidden;
+  z-index: 0;
 }
 
-@keyframes moveClouds {
+.cloud {
+  position: absolute;
+  background: url('https://i.imgur.com/5b1fCXM.png') no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 100px;
+  opacity: 0.6;
+}
+
+.cloud1 {
+  top: 10%;
+  left: -200px;
+  animation: moveCloud 60s linear infinite;
+}
+
+.cloud2 {
+  top: 30%;
+  left: -250px;
+  animation: moveCloud 90s linear infinite;
+}
+
+.cloud3 {
+  top: 60%;
+  left: -220px;
+  animation: moveCloud 75s linear infinite;
+}
+
+@keyframes moveCloud {
   0% { transform: translateX(0); }
-  100% { transform: translateX(50%); }
+  100% { transform: translateX(150vw); }
 }
 
 .container {
@@ -30,7 +59,7 @@ body {
   text-align: center;
   background: rgba(255, 255, 255, 0.15);
   padding: 40px;
-  margin: 80px auto;
+  margin: 100px auto;
   border-radius: 20px;
   width: 90%;
   max-width: 400px;
@@ -40,9 +69,8 @@ body {
 }
 
 .title {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #fff;
 }
 
 .search-box {
@@ -75,7 +103,7 @@ body {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
   border-radius: 15px;
   padding: 20px;
   animation: fadeIn 0.8s ease-in-out;
