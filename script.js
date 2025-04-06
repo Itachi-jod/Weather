@@ -1,4 +1,4 @@
-const apiKey = "228dfb40cf77162a98936f1934bc9fdc"; // Replace with your OpenWeatherMap API key
+const apiKey = "4cbd82a06881196377802f1d3efedd4e"; // Replace with your OpenWeatherMap API key
 
 async function getWeather() {
   const city = document.getElementById("cityInput").value.trim();
