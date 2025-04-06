@@ -2,42 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather Forecast ☁️</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="https://streamable.com/vxcqts" type="video/mp4" />
+    </video>
+  </div>
 
-  <!-- Cloud Background -->
   <div class="sky">
     <div class="cloud cloud1"></div>
     <div class="cloud cloud2"></div>
     <div class="cloud cloud3"></div>
   </div>
 
-  <!-- Weather App -->
   <div class="container">
-    <h1 class="title">Weather Forecast ☁️</h1>
+    <h1 class="title">Weather Forecast ☁️<span>☁️</span></h1>
     <div class="search-box">
-      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <input type="text" id="cityInput" placeholder="Enter city" />
       <button onclick="getWeather()">Search</button>
     </div>
     <div class="card" id="weatherCard" style="display: none;">
       <h2 id="cityName"></h2>
       <p id="description"></p>
       <div class="details">
-        <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
-        <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
-        <p><strong>Wind:</strong> <span id="wind"></span> m/s</p>
+        <p><strong>Temperature:</strong> <span id="temp"></span></p>
+        <p><strong>Humidity:</strong> <span id="humidity"></span></p>
+        <p><strong>Wind:</strong> <span id="wind"></span></p>
       </div>
     </div>
   </div>
-
-  <!-- Floating Video -->
-  <video autoplay loop muted class="video-front">
-    <source src="https://drive.google.com/file/d/1BLCJur0MDfwuNNAwQSNdu2cnUMscbNV3/view?usp=drivesdk" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
   <script src="script.js"></script>
 </body>
