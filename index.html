@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather Forecast 🌥️</title>
+  <title>Weather forecast ☁️</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Cloud Background -->
   <div class="sky">
     <div class="cloud cloud1"></div>
     <div class="cloud cloud2"></div>
     <div class="cloud cloud3"></div>
   </div>
 
+  <!-- Weather App -->
   <div class="container">
-    <h1 class="title">Weather Forecast 🌥️</h1>
+    <h1 class="title">Weather Forecast ☁️</h1>
     <div class="search-box">
       <input type="text" id="cityInput" placeholder="Enter city name" />
       <button onclick="getWeather()">Search</button>
@@ -23,12 +26,18 @@
       <h2 id="cityName"></h2>
       <p id="description"></p>
       <div class="details">
-        <p><strong>Temp:</strong> <span id="temp"></span>°C</p>
+        <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
         <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
         <p><strong>Wind:</strong> <span id="wind"></span> m/s</p>
       </div>
     </div>
   </div>
+
+  <!-- Floating Video -->
+  <video autoplay loop muted class="video-front">
+    <source src="" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
   <script src="script.js"></script>
 </body>
