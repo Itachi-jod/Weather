@@ -13,6 +13,7 @@ body {
   height: 100vh;
 }
 
+/* Cloud Animation */
 .sky {
   position: fixed;
   width: 100%;
@@ -23,7 +24,7 @@ body {
 
 .cloud {
   position: absolute;
-  background: url('https://i.imgur.com/5b1fCXM.png') no-repeat;
+  background: url('https://tinyurl.com/29syqket') no-repeat;
   background-size: contain;
   width: 200px;
   height: 100px;
@@ -53,6 +54,7 @@ body {
   100% { transform: translateX(150vw); }
 }
 
+/* App Container */
 .container {
   position: relative;
   z-index: 2;
@@ -117,4 +119,15 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating Video */
+.video-front {
+  position: fixed;
+  z-index: 999;
+  width: 300px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
