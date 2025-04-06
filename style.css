@@ -9,52 +9,62 @@
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to top, #87ceeb, #e0f7ff);
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100vh;
+  position: relative;
+  color: #fff;
 }
 
-/* Cloud Animation */
+.video-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .sky {
   position: fixed;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 0;
+  z-index: -1;
 }
 
 .cloud {
   position: absolute;
-  background: url('https://drive.google.com/file/d/1BLCJur0MDfwuNNAwQSNdu2cnUMscbNV3/view?usp=drivesdk') no-repeat;
+  background: url('https://tinyurl.com/29syqket') no-repeat;
   background-size: contain;
   width: 200px;
   height: 100px;
   opacity: 0.6;
 }
-
 .cloud1 {
   top: 10%;
   left: -200px;
   animation: moveCloud 60s linear infinite;
 }
-
 .cloud2 {
   top: 30%;
   left: -250px;
   animation: moveCloud 90s linear infinite;
 }
-
 .cloud3 {
   top: 60%;
   left: -220px;
   animation: moveCloud 75s linear infinite;
 }
-
 @keyframes moveCloud {
   0% { transform: translateX(0); }
   100% { transform: translateX(150vw); }
 }
 
-/* App Container */
 .container {
   position: relative;
   z-index: 2;
@@ -65,7 +75,6 @@ body {
   border-radius: 20px;
   width: 90%;
   max-width: 400px;
-  color: #fff;
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
@@ -81,14 +90,12 @@ body {
   justify-content: center;
   margin-bottom: 20px;
 }
-
 .search-box input {
   padding: 10px;
   border-radius: 10px;
   border: none;
   width: 60%;
 }
-
 .search-box button {
   padding: 10px 20px;
   border: none;
@@ -99,7 +106,6 @@ body {
   cursor: pointer;
   transition: background 0.3s;
 }
-
 .search-box button:hover {
   background: #eee;
 }
@@ -110,7 +116,6 @@ body {
   padding: 20px;
   animation: fadeIn 0.8s ease-in-out;
 }
-
 .details p {
   margin: 10px 0;
   font-size: 1rem;
@@ -119,15 +124,4 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-/* Floating Video */
-.video-front {
-  position: fixed;
-  z-index: 999;
-  width: 300px;
-  bottom: 20px;
-  right: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
